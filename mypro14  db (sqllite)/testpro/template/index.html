@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student data</title>
+</head>
+<body>
+<h1>Student List</h1>
+
+{% if   stu_list %}
+
+<table border="2">
+    <thead>
+    <th>sid</th>
+    <th>sname</th>
+    <th>sage</th>
+    <th>saddr</th>
+    </thead>
+
+    <tbody>
+    {% for i in stu_list %}
+    <tr>
+        <td>{{i.sid}}</td>
+        <td>{{i.sname}}</td>
+        <td>{{i.sage}}</td>
+        <td>{{i.saddr}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{%else%}
+    <h1> No records found</h1>
+{%endif%}
+</body>
+</html>
